@@ -1,0 +1,13 @@
+<p>
+  balance works!
+</p>
+
+<div *mobxAutorun>
+  <p>
+    <!--Your bank account balance: $ {{account.getBalance()}}-->
+    Your bank account balance: $ {{account.balance}}
+  </p>
+  <p *ngIf="account.isNegative"> <!--//加@computed後不需()-->
+    Your account is overdraft
+  </p>
+</div>
